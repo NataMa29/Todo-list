@@ -40,35 +40,24 @@ function newElement() {
     };
   }
 }
-
-// const NAME_UP = 'Name ˄';
-// const NAME_DOWN = 'Name ˅';
-
 let header = document.querySelector(".sort");
-// let nameHeader = document.querySelector('thead tr th:first-child');
-let elementClicked = '';
-let upSorted = false;
-header.addEventListener("click", sortByHeaderName);
-
-function sortByHeaderName(e) {
-  elementClicked = e.target.innerText;
-  let rows = [...document.querySelectorAll("ul li")];
-  let tbody = document.querySelector("li");
-  let sortedArr = rows.sort(compare);
-  tbody.innerHTML = '';
-  sortedArr.forEach(el => tbody.append(el));
-  upSorted = !upSorted;
+let sor = false;
+header.addEventListener("click", sortList);
+function sortList() {
+   let ul = document.querySelector('ul');
+   
+   if(!sor) {
+  Array.from(ul.getElementsByTagName("li"))
+    .sort((a, b) => a.textContent.localeCompare(b.textContent))
+    .forEach(li => ul.appendChild(li));
+    sor = true;
+    header.className = "sortdown";
 }
-
-let item1 = "";
-let item2 = "";
-
-function compare(a, b) {
-  item1 = a.querySelector("li").innerText;
-  item2 = b.querySelector("li").innerText;
-
-if (upSorted) {
-  return item1 < item2 ? 1 : item1 > item2 ? -1 : 0;
+else {
+  Array.from(ul.getElementsByTagName("li"))
+  .sort((b, a) => a.textContent.localeCompare(b.textContent))
+  .forEach(li => ul.appendChild(li));
+  sor = false;
+  header.className = "sort";
 }
-return item1 < item2 ? -1 : item1 > item2 ? 1 : 0;
 }

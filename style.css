@@ -21,6 +21,18 @@ body {
     background: url("images/light_grey_down.png") no-repeat;
     cursor: hand;
 }
+.sortdown {
+    background: url("images/black_up.png") no-repeat;
+    width: 25px;
+    height: 15px;
+   margin: 0 50px -10px 0;
+   float: right;
+
+}
+.sortdown:hover{
+    background: url("images/light_grey_up.png") no-repeat;
+    cursor: hand;
+}
 
 
 ul {
