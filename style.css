@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    margin: auto 0;
+    min-width: 250px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.sort {
+    background: url("images/black_down.png") no-repeat;
+    width: 25px;
+    height: 15px;
+   margin: 0 50px -10px 0;
+   float: right;
+
+}
+.sort:hover{
+    background: url("images/light_grey_down.png") no-repeat;
+    cursor: hand;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    font-size: 18px;
+    transition: 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 7px 10px 4px 12px;
+    margin: 5px 5px 14px 5px;
+    border-radius: 50%;
+    border: 1px solid #C4C4C4;
+}
+
+.close:hover {
+    background-color: rgba(131, 58, 224, 1);
+    color: white;
+    
+}
+
+.yellow {
+    background-color:rgba(255, 220, 64, 1);
+    height: 28px;
+    border-radius: 10px 10px 0 0;
+}
+.wrapper {
+    width: 336px;
+    left: 408px;
+    top: 232px;
+    border-radius: 10px;
+    border: 1px solid #C4C4C4;
+    padding-bottom: 20px;
+}
+h1 {
+    font-family: Roboto;
+    font-size: 26px;
+    Line-height: 30px;
+}
+
+.header {
+    text-align: center;
+}
+
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    margin: 0;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    margin: 18px;
+}
+
+.addBtn {
+    cursor: pointer;
+
+}
+.plus{
+    background-color:rgba(153, 83, 241, 1);
+    height: 42px;
+width: 42px;
+border-radius: 71px;
+position: absolute;
+margin-left: 92px;
+    margin-top: -42px;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.add{
+    background-color:rgba(131, 58, 224, 1);
+    border-radius: 10px;
+    height: 42px;
+width: 150px;
+left: 500px;
+top: 407px;
+border-radius: 71px;
+align-self: center;
+margin: auto;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.add:hover {
+    background: rgba(153, 83, 241, 1);
+   
+}
